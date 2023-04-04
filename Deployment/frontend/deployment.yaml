@@ -67,7 +67,6 @@ spec:
         terminationMessagePolicy: File
         # Update with your image name
         image: 'quay.io/idansalmon/frontend-app:v2'
-        #
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst

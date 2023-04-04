@@ -1,0 +1,9 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: api-workshop
+  labels:
+    argocd.argoproj.io/managed-by: user5-argocd
+spec:
+  finalizers:
+    - kubernetes

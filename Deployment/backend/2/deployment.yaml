@@ -52,7 +52,7 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: app-environment
-                key: BACKEBD_PORT
+                key: BACKEND_PORT
         ports:
           - containerPort: 8080
             protocol: TCP

@@ -14,3 +14,7 @@ configMapGenerator:
     - HOST1=backend1
     - HOST2=backend2
     - API_URL="Hello World"
+- name: app-config
+  files:
+  - frontend/conf/default.conf
+  - entrypoint.sh

@@ -21,6 +21,11 @@ spec:
         app: fronetend
         deployment: fronetend
     spec:
+      volumes:
+      - name: app-config
+        configMap:
+          name: app-config
+          defaultMode: 509
       containers:
       - resources:
           requests:
@@ -38,6 +43,9 @@ spec:
           failureThreshold: 3
         terminationMessagePath: /dev/termination-log
         name: fronetend
+        volumeMounts:
+          - name: app-config
+            mountPath: '/usr/share/nginx/html/config'
         livenessProbe:
           httpGet:
             path: /probes/liveness
@@ -58,7 +66,7 @@ spec:
         imagePullPolicy: IfNotPresent
         terminationMessagePolicy: File
         # Update with your image name
-        image: 'quay.io/idansalmon/frontend-app:v1'
+        image: 'quay.io/idansalmon/frontend-app:v2'
         #
       restartPolicy: Always
       terminationGracePeriodSeconds: 30

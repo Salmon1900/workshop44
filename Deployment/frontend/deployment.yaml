@@ -58,7 +58,7 @@ spec:
         imagePullPolicy: IfNotPresent
         terminationMessagePolicy: File
         # Update with your image name
-        image: 'quay.io/idansalmon/frontend:v1'
+        image: 'quay.io/idansalmon/frontend-app:v1'
         #
       restartPolicy: Always
       terminationGracePeriodSeconds: 30

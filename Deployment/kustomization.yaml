@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - backend/1
 - backend/2
+- backend/3
 - frontend
 
 configMapGenerator:
@@ -13,6 +14,7 @@ configMapGenerator:
     - PORT=8080
     - HOST1=backend1
     - HOST2=backend2
+    - HOST3=backend3
     - API_URL="Hello World"
 - name: app-config
   files:

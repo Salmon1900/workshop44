@@ -17,4 +17,4 @@ configMapGenerator:
 - name: app-config
   files:
   - frontend/conf/default.conf
-  - entrypoint.sh
+  - frontend/conf/entrypoint.sh
